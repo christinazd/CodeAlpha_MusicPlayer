@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulsewave Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
+    <main class="app">
+      <section class="player-card" aria-label="Music player">
+        <div class="art-panel">
+          <div class="art-wrap">
+            <img id="artwork" class="artwork" alt="Album artwork" />
+            <span class="art-glow"></span>
+          </div>
+
+          <div class="song-meta">
+            <h1 id="song-title" class="song-title">Loading...</h1>
+            <p id="song-artist" class="song-artist">---</p>
+          </div>
+
+          <div class="time-row">
+            <span id="current-time">0:00</span>
+            <span id="total-time">0:00</span>
+          </div>
+        </div>
+
+        <div class="controls-panel">
+          <div class="controls">
+            <button id="prev" class="control-btn" aria-label="Previous track">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M6 5h2v14H6zM18 5l-10 7 10 7V5z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+
+            <button
+              id="play"
+              class="control-btn play-btn"
+              aria-label="Play or pause"
+              aria-pressed="false"
+            >
+              <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+              <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="currentColor" />
+              </svg>
+            </button>
+
+            <button id="next" class="control-btn" aria-label="Next track">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M16 5h2v14h-2zM6 5l10 7-10 7V5z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="progress-wrap">
+            <input
+              id="progress"
+              class="progress-bar"
+              type="range"
+              min="0"
+              max="100"
+              step="0.1"
+              value="0"
+              aria-label="Seek position"
+            />
+            <span class="progress-glow"></span>
+          </div>
+
+          <div class="volume-row">
+            <button id="mute" class="control-btn ghost-btn" aria-label="Mute">
+              <svg class="icon-volume" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 9v6h4l5 4V5l-5 4H5z" fill="currentColor" />
+                <path
+                  d="M16.5 8.5a4 4 0 010 7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <svg class="icon-mute" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 9v6h4l5 4V5l-5 4H5z" fill="currentColor" />
+                <path
+                  d="M16 9l4 4m0-4l-4 4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+            <input
+              id="volume"
+              class="volume-bar"
+              type="range"
+              min="0"
+              max="100"
+              step="1"
+              value="80"
+              aria-label="Volume"
+            />
+          </div>
+
+          <div class="playlist">
+            <div class="playlist-header">
+              <span>Playlist</span>
+              <span id="track-count">0 tracks</span>
+            </div>
+            <ul id="playlist" class="playlist-list" role="list"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <audio id="audio"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
