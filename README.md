@@ -58,4 +58,6 @@ start audio.
 
 <img width="1885" height="895" alt="image" src="https://github.com/user-attachments/assets/e4a7678c-6e29-421c-b9ba-0a7be14f6aa1" />
 
+Note:This project is with coordination with CodeAlpha frontend development internship.
+
 
