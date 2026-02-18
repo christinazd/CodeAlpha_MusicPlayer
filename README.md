@@ -56,7 +56,6 @@ start audio.
 
 ## Preview
 
-Add a screenshot named `preview.png` to the project root to show it here.
+<img width="1885" height="895" alt="image" src="https://github.com/user-attachments/assets/e4a7678c-6e29-421c-b9ba-0a7be14f6aa1" />
 
-![Music player preview](preview.png)
 
